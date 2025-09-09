@@ -1,0 +1,31 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-crimson {
+  background-color: #990000;
+}
+
+.btn-crimson {
+  background-color: #990000;
+  color: #fff;
+}
+
+.btn-crimson:hover {
+  background-color: #7a0000;
+  color: #fff;
+}
+
+.hero {
+  background: url("images/campus.jpg") no-repeat center center/cover;
+  min-height: 80vh;
+}
+
+h2 {
+  color: #990000;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
