@@ -2,55 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Indiana University | Home</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indiana University Recruitment</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-crimson shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Indiana University</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
-          <li class="nav-item"><a class="nav-link" href="studentlife.html">Student Life</a></li>
-          <li class="nav-item"><a class="nav-link" href="costs.html">Costs & Aid</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #990000;">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">IU Recruitment</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="studentlife.html">Student Life</a></li>
+        <li class="nav-item"><a class="nav-link" href="costs.html">Costs & Aid</a></li>
+        <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero text-center text-white d-flex align-items-center justify-content-center" style="height: 90vh; background: url('images/iu-campus.jpg') center/cover no-repeat;">
+  <div>
+    <h1 class="display-3 fw-bold" style="font-family: 'Merriweather', serif;">Welcome to Indiana University</h1>
+    <p class="lead mt-3" style="font-family: 'Inter', sans-serif;">Where your future begins</p>
+    <a href="about.html" class="btn btn-light btn-lg mt-3">Learn More</a>
+  </div>
+</section>
+
+<!-- Quick Links -->
+<section class="container my-5">
+  <div class="row text-center g-4">
+    <div class="col-md-3">
+      <div class="card p-3">
+        <h5>Programs</h5>
+        <p>Explore all majors and courses</p>
+        <a href="programs.html" class="btn btn-crimson">View</a>
       </div>
     </div>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero text-white text-center d-flex align-items-center justify-content-center">
-    <div>
-      <h1 class="display-4 fw-bold">Welcome to Indiana University</h1>
-      <p class="lead">Excellence in education, research, and community since 1820</p>
-      <a href="programs.html" class="btn btn-light btn-lg rounded-pill mt-3">Explore Programs</a>
+    <div class="col-md-3">
+      <div class="card p-3">
+        <h5>Student Life</h5>
+        <p>Campus events, clubs & housing</p>
+        <a href="studentlife.html" class="btn btn-crimson">View</a>
+      </div>
     </div>
-  </header>
-
-  <!-- About -->
-  <section class="py-5 container">
-    <h2 class="text-center mb-4">About Us</h2>
-    <p class="text-center">Located in Bloomington, Indiana, IU is a leader in business, technology, health sciences, and the arts. We empower students with knowledge, innovation, and community spirit.</p>
-    <div class="row mt-4">
-      <div class="col-md-4"><img src="images/campus.jpg" class="img-fluid rounded shadow-sm" alt="IU Campus"></div>
-      <div class="col-md-4"><img src="images/library.jpg" class="img-fluid rounded shadow-sm" alt="IU Library"></div>
-      <div class="col-md-4"><img src="images/students.jpg" class="img-fluid rounded shadow-sm" alt="Students at IU"></div>
+    <div class="col-md-3">
+      <div class="card p-3">
+        <h5>Costs & Aid</h5>
+        <p>Tuition, scholarships & plans</p>
+        <a href="costs.html" class="btn btn-crimson">View</a>
+      </div>
     </div>
-  </section>
+    <div class="col-md-3">
+      <div class="card p-3">
+        <h5>Alumni</h5>
+        <p>Success stories and internships</p>
+        <a href="alumni.html" class="btn btn-crimson">View</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">© 2025 Indiana University | Bloomington, IN</p>
-  </footer>
+<!-- Mission & CTA -->
+<section class="text-center my-5 p-5" style="background-color: #dd0000;">
+  <h2 style="font-family: 'Merriweather', serif;">Our Mission</h2>
+  <p style="font-family: 'Inter', sans-serif; max-width: 600px; margin: auto;">Indiana University is dedicated to academic excellence, community involvement, and preparing students for global leadership. Join our vibrant community and start your journey today!</p>
+  <a href="contact.html" class="btn btn-crimson mt-3">Request Info</a>
+</section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

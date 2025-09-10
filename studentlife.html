@@ -1,71 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Indiana University | Student Life</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Life</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-crimson shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Indiana University</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
-          <li class="nav-item"><a class="nav-link active" href="studentlife.html">Student Life</a></li>
-          <li class="nav-item"><a class="nav-link" href="costs.html">Costs & Aid</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #990000;">
+<div class="container">
+<a class="navbar-brand" href="index.html">IU Recruitment</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="studentlife.html">Student Life</a></li>
+        <li class="nav-item"><a class="nav-link" href="costs.html">Costs & Aid</a></li>
+        <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+</div>
+</div>
+</nav>
+
+<section class="container my-5">
+<h2 class="text-center" style="font-family: 'Merriweather', serif;">Campus Life</h2>
+<p class="text-center mt-2" style="font-family: 'Inter', sans-serif;">Experience vibrant student activities, clubs, and campus facilities.</p>
+
+<!-- Campus Facilities -->
+<div class="row g-4 mt-4">
+<div class="col-md-4">
+<div class="card p-3">
+<h5>Indiana Memorial Union</h5>
+<p>Events, dining, and student spaces</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card p-3">
+<h5>Eskenazi Museum</h5>
+<p>Art exhibitions and cultural events</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card p-3">
+<h5>Recreational Facilities</h5>
+<p>Gyms, fields, and wellness programs</p>
+</div>
+</div>
+</div>
+
+<!-- Clubs & Organizations Grid -->
+<section class="mt-5">
+<h3>Clubs & Organizations</h3>
+<div class="row g-4 mt-3">
+<div class="col-md-3"><div class="card p-3 text-center">Hockey Club</div></div>
+<div class="col-md-3"><div class="card p-3 text-center">Theater Club</div></div>
+<div class="col-md-3"><div class="card p-3 text-center">Volunteering</div></div>
+<div class="col-md-3"><div class="card p-3 text-center">Music Society</div></div>
+</div>
+</section>
+
+
+<!-- Image Gallery Slider -->
+<section class="mt-5">
+<h3>Gallery</h3>
+<div id="gallerySlider" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/studentlife1.jpg" class="d-block w-100" alt="Student Life 1">
     </div>
-  </nav>
-
-  <!-- Student Life -->
-  <section class="container py-5">
-    <h2 class="text-center mb-4">Student Life at IU</h2>
-    <p class="text-center">From vibrant campus traditions to student organizations, IU offers an unforgettable college experience.</p>
-    <div class="row g-4 mt-4">
-      <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-          <img src="images/students.jpg" class="card-img-top" alt="Clubs and Organizations">
-          <div class="card-body">
-            <h5 class="card-title">Clubs & Organizations</h5>
-            <p class="card-text">Join 750+ student-led clubs including sports, cultural groups, music, and leadership organizations.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-          <img src="images/sports.jpg" class="card-img-top" alt="Athletics">
-          <div class="card-body">
-            <h5 class="card-title">Athletics</h5>
-            <p class="card-text">IU Hoosiers compete in the Big Ten, with a strong tradition in basketball, swimming, and soccer.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-          <img src="images/campus.jpg" class="card-img-top" alt="Housing">
-          <div class="card-body">
-            <h5 class="card-title">Housing</h5>
-            <p class="card-text">Choose from on-campus residence halls, apartments, and themed communities that foster connections.</p>
-          </div>
-        </div>
-      </div>
+    <div class="carousel-item">
+      <img src="images/studentlife2.jpg" class="d-block w-100" alt="Student Life 2">
     </div>
-  </section>
+    <div class="carousel-item">
+      <img src="images/studentlife3.jpg" class="d-block w-100" alt="Student Life 3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#gallerySlider" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#gallerySlider" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+</section>
 
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">© 2025 Indiana University | Bloomington, IN</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

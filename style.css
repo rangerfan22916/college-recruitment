@@ -1,31 +1,129 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.bg-crimson {
-  background-color: #990000;
-}
-
-.btn-crimson {
-  background-color: #990000;
-  color: #fff;
-}
-
-.btn-crimson:hover {
-  background-color: #7a0000;
-  color: #fff;
-}
-
+/* Hero Section with Parallax & Overlay */
 .hero {
-  background: url("images/campus.jpg") no-repeat center center/cover;
-  min-height: 80vh;
+  height: 90vh;
+  background: url('campus.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.55); /* semi-transparent dark overlay */
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 15px rgba(0,0,0,0.7);
+  animation: fadeInDown 1s ease forwards;
+}
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+  animation: fadeInUp 1.2s ease forwards;
+}
+@keyframes fadeInDown {0% {opacity:0; transform:translateY(-50px);} 100%{opacity:1; transform:translateY(0);}}
+@keyframes fadeInUp {0% {opacity:0; transform:translateY(50px);} 100%{opacity:1; transform:translateY(0);}}
+
+/* Buttons with Glow */
+.btn-crimson {
+  background: var(--gradient-crimson);
+  color: var(--white);
+  border-radius: 12px;
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+.btn-crimson:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.6), 0 0 15px rgba(255, 0, 0, 0.6);
 }
 
-h2 {
-  color: #990000;
+/* Section Backgrounds with Overlays */
+.section-programs, .section-studentlife, .section-alumni, .section-testimonials {
+  position: relative;
+  padding: 6rem 0;
+  color: var(--white);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section-programs::after,
+.section-studentlife::after,
+.section-alumni::after,
+.section-testimonials::after {
+  content: "";
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.55);
+  z-index:1;
+}
+.section-programs .container,
+.section-studentlife .container,
+.section-alumni .container,
+.section-testimonials .container {
+  position: relative;
+  z-index:2;
 }
 
-.card img {
-  height: 200px;
-  object-fit: cover;
+/* Cards with Depth */
+.card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+}
+
+/* Section Separators - Angled */
+.section-separator {
+  height: 60px;
+  background: var(--cream);
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+}
+
+/* Scroll Animations for Cards/Text */
+.fade-up, .fade-left, .fade-right {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+.fade-up.visible, .fade-left.visible, .fade-right.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  background: url('footer-bg.jpg') no-repeat center center/cover;
+  background-size: cover;
+  padding: 4rem 0;
+  text-align: center;
+  color: var(--white);
+  position: relative;
+}
+footer::after {
+  content:"";
+  position:absolute; top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.5);
+  z-index:1;
+}
+footer .container {position:relative; z-index:2;}
