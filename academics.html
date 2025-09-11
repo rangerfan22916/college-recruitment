@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IU – Academics</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-crimson shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Indiana University</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="academics.html">Academics</a></li>
+          <li class="nav-item"><a class="nav-link" href="studentlife.html">Student Life</a></li>
+          <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="hero text-white d-flex align-items-center" style="background: url('images/campus-academics.jpg') center/cover no-repeat; min-height: 50vh;">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold">Excellence in Education</h1>
+      <p class="lead">Discover over 200 majors, world-class faculty, and opportunities that shape tomorrow’s leaders.</p>
+    </div>
+  </section>
+
+  <!-- Academic Programs -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Academic Programs</h2>
+      <div class="row g-4">
+        <!-- Business -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Business</h5>
+              <p class="card-text">Accounting, Finance, Marketing, Entrepreneurship.</p>
+              <button class="btn btn-outline-crimson mt-2" onclick="toggleCurriculum('business')">View Curriculum</button>
+              <ul class="curriculum mt-2" id="business" style="display:none;">
+                <li>Intro to Business</li>
+                <li>Financial Accounting</li>
+                <li>Marketing Principles</li>
+                <li>Business Ethics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Engineering -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Engineering</h5>
+              <p class="card-text">Mechanical, Electrical, Computer Science, Civil Engineering.</p>
+              <button class="btn btn-outline-crimson mt-2" onclick="toggleCurriculum('engineering')">View Curriculum</button>
+              <ul class="curriculum mt-2" id="engineering" style="display:none;">
+                <li>Calculus I & II</li>
+                <li>Physics</li>
+                <li>Intro to Programming</li>
+                <li>Engineering Design</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Arts & Sciences -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Arts & Sciences</h5>
+              <p class="card-text">Biology, Chemistry, Psychology, History, Literature.</p>
+              <button class="btn btn-outline-crimson mt-2" onclick="toggleCurriculum('arts')">View Curriculum</button>
+              <ul class="curriculum mt-2" id="arts" style="display:none;">
+                <li>Intro to Psychology</li>
+                <li>Organic Chemistry</li>
+                <li>World History</li>
+                <li>English Literature</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Health Sciences -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Health Sciences</h5>
+              <p class="card-text">Nursing, Public Health, Medicine, Kinesiology.</p>
+              <button class="btn btn-outline-crimson mt-2" onclick="toggleCurriculum('health')">View Curriculum</button>
+              <ul class="curriculum mt-2" id="health" style="display:none;">
+                <li>Anatomy & Physiology</li>
+                <li>Public Health Policy</li>
+                <li>Clinical Nursing</li>
+                <li>Sports Medicine</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Education -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Education</h5>
+              <p class="card-text">Elementary, Secondary, Special Education, Higher Ed Leadership.</p>
+              <button class="btn btn-outline-crimson mt-2" onclick="toggleCurriculum('education')">View Curriculum</button>
+              <ul class="curriculum mt-2" id="education" style="display:none;">
+                <li>Child Development</li>
+                <li>Teaching Strategies</li>
+                <li>Inclusive Education</li>
+                <li>Leadership in Education</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Informatics -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Informatics</h5>
+              <p class="card-text">Data Science, Cybersecurity, Artificial Intelligence.</p>
+              <button class="btn btn-outline-crimson mt-2" onclick="toggleCurriculum('informatics')">View Curriculum</button>
+              <ul class="curriculum mt-2" id="informatics" style="display:none;">
+                <li>Database Management</li>
+                <li>Cybersecurity Fundamentals</li>
+                <li>Machine Learning</li>
+                <li>Human-Computer Interaction</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Faculty Highlights -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 text-center">Meet Our Faculty</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <img src="images/faculty1.jpg" class="card-img-top" alt="Professor 1">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Sarah Johnson</h5>
+              <p class="card-text">Professor of Psychology – Award-winning researcher in cognitive science and student mentorship.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <img src="images/faculty2.jpg" class="card-img-top" alt="Professor 2">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Michael Lee</h5>
+              <p class="card-text">Professor of Engineering – Specializes in sustainable design and AI-driven innovation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <img src="images/faculty3.jpg" class="card-img-top" alt="Professor 3">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Emily Carter</h5>
+              <p class="card-text">Professor of Business – Focused on global marketing strategies and entrepreneurship.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Research & Innovation</h2>
+      <p class="lead mb-4">IU is home to cutting-edge labs, collaborative projects, and industry partnerships that give students real-world experience.</p>
+      <a href="about.html" class="btn btn-crimson">Explore Research Opportunities</a>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="footer py-3 text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Indiana University | Academics</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

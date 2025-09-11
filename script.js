@@ -1,56 +1,47 @@
-// Scroll-to-top button
-const scrollBtn = document.createElement('button');
-scrollBtn.className = "scroll-top";
-scrollBtn.innerHTML = "↑";
-document.body.appendChild(scrollBtn);
-
-scrollBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+// Navbar scroll effect
 window.addEventListener('scroll', () => {
-  scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+  const navbar = document.querySelector('.navbar');
+  if(window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
 });
 
-// Fade-in on scroll
+// Toggle curriculum lists (Academics page)
+function toggleCurriculum(id) {
+  const element = document.getElementById(id);
+  if(element.style.display === "none" || !element.style.display) {
+    element.style.display = "block";
+  } else {
+    element.style.display = "none";
+  }
+}
+
+// Contact form validation and success animation
+document.getElementById('contactForm')?.addEventListener('submit', function(e){
+  e.preventDefault();
+  const submitBtn = this.querySelector('button[type="submit"]');
+  submitBtn.innerText = 'Sending...';
+  setTimeout(() => {
+    alert('Thank you! Your message has been submitted.');
+    this.reset();
+    submitBtn.innerText = 'Submit';
+  }, 800);
+});
+
+// Fade-in on scroll for sections
 const faders = document.querySelectorAll('.fade-in');
-const appearOptions = { threshold: 0.3, rootMargin: "0px 0px -50px 0px" };
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
+const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
   entries.forEach(entry => {
     if(!entry.isIntersecting) return;
-    entry.target.classList.add('visible');
-    observer.unobserve(entry.target);
+    entry.target.classList.add('appear');
+    appearOnScroll.unobserve(entry.target);
   });
 }, appearOptions);
 
-faders.forEach(fader => appearOnScroll.observe(fader));
-
-// Form validation
-function setupFormValidation(formId){
-  const form = document.getElementById(formId);
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    let valid = true;
-    form.querySelectorAll('input, select, textarea').forEach(input => {
-      if(!input.checkValidity()){
-        valid = false;
-        input.style.borderColor = "red";
-      } else {
-        input.style.borderColor = "#ccc";
-      }
-    });
-    if(valid){
-      alert("Form submitted successfully!");
-      form.reset();
-    } else {
-      alert("Please complete all required fields correctly.");
-    }
-  });
-}
-
-setupFormValidation('contactForm');
-setupFormValidation('inquiryForm');
-
-// Simple Carousel Hover Pause
-const galleries = document.querySelectorAll('.carousel');
-galleries.forEach(carousel => {
-  carousel.addEventListener('mouseenter', () => carousel.pause());
-  carousel.addEventListener('mouseleave', () => carousel.cycle());
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
 });

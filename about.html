@@ -1,91 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About IU</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IU – Contact</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #990000;">
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-crimson shadow-sm">
   <div class="container">
-    <a class="navbar-brand" href="index.html">IU Recruitment</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <a class="navbar-brand fw-bold" href="index.html">Indiana University</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
-         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
         <li class="nav-item"><a class="nav-link" href="studentlife.html">Student Life</a></li>
-        <li class="nav-item"><a class="nav-link" href="costs.html">Costs & Aid</a></li>
-        <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
+        <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Mission + Values -->
-<section class="container my-5">
-  <h2 class="text-center" style="font-family: 'Merriweather', serif;">Our Mission & Values</h2>
-  <p class="text-center mt-3" style="font-family: 'Inter', sans-serif; max-width:700px; margin:auto;">
-    Indiana University is committed to academic excellence, leadership, and community engagement. We provide a nurturing environment where students thrive both personally and professionally.
-  </p>
-</section>
 
-<!-- Location + Contact -->
-<section class="container my-5">
-  <div class="row g-4">
-    <div class="col-md-6">
-      <h3>Our Location</h3>
-      <p>107 S. Indiana Avenue, Bloomington, IN 47405</p>
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.284656175402!2d-86.52558222364486!3d39.16824903067684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886c66c26789ad33%3A0x3499a08bb315d436!2sIndiana%20University%20Bloomington!5e0!3m2!1sen!2sus!4v1757512782680!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div class="col-md-6">
-      <h3>Contact Info</h3>
-      <p>Email: admissions@iu.edu</p>
-      <p>Phone: +1 (812) 855-4848</p>
-    </div>
-  </div>
-</section>
+  <!-- Contact Hero -->
+  <section class="hero d-flex align-items-center text-center text-white">
+    <div class="container">
+      <h1 class="display-4 fw-bold">About Indiana University</h1>
+      <p class="lead">Indiana University is a world-class public research institution with a proud tradition of academic excellence, innovation, and community impact. Founded in 1820, IU has grown into one of the nation’s leading universities, offering more than 930 academic programs across multiple campuses. With a vibrant community of students, faculty, and alumni, Indiana University is dedicated to shaping leaders, advancing knowledge, and making a difference locally and globally.
 
-<!-- Inquiry Form -->
-<section class="container my-5">
-  <h3 class="text-center">Request More Information</h3>
-  <form id="inquiryForm" class="mx-auto" style="max-width:500px;">
-    <div class="mb-3">
-      <label for="name" class="form-label">Full Name</label>
-      <input type="text" class="form-control" id="name" required>
+At IU, learning extends beyond the classroom. From groundbreaking research and top-ranked programs to spirited traditions and a thriving campus life, our students gain the tools and experiences needed to succeed in a diverse and ever-changing world. Guided by our core values of discovery, inclusion, and service, Indiana University continues to prepare the next generation of innovators, problem solvers, and global citizens.</p>
     </div>
-    <div class="mb-3">
-      <label for="email" class="form-label">Email</label>
-      <input type="email" class="form-control" id="email" required>
+  </section>
+
+
+  <!-- Location -->
+  <section class="py-5 bg-light text-center">
+    <h2>Campus Location</h2>
+    <p>107 S. Indiana Avenue, Bloomington, IN 47405</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.284656175402!2d-86.52558222364486!3d39.16824903067684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886c66c26789ad33%3A0x3499a08bb315d436!2sIndiana%20University%20Bloomington!5e0!3m2!1sen!2sus!4v1757552648537!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+    <footer class="footer py-3 text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Indiana University | About</p>
     </div>
-    <div class="mb-3">
-      <label for="program" class="form-label">Interested Program</label>
-      <select id="program" class="form-select" required>
-        <option value="">Select Program</option>
-        <option>Business</option>
-        <option>Computer Science</option>
-        <option>Health Sciences</option>
-        <option>Arts</option>
-      </select>
-    </div>
-    <button type="submit" class="btn btn-crimson">Submit</button>
-  </form>
-</section>
+  </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
-<script>
-document.getElementById('inquiryForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  alert("Thank you for your inquiry! We will contact you soon.");
-  this.reset();
-});
-</script>
 </body>
 </html>
