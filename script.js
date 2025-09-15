@@ -44,6 +44,16 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
 
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
+  
+// script.js (included on all pages)
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar');
+  if(window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
 
 });
 
