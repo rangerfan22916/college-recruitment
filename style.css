@@ -105,7 +105,11 @@ p, li, a, span, small {
 
 /* Footer */
 .footer {
+
   background-color: var(--white);
+
+  background-color: var(--dark-gray);
+
   color: var(--white);
   font-size: 0.9rem;
   letter-spacing: 0.5px;
@@ -141,3 +145,30 @@ ul.curriculum {
     font-size: 1.2rem;
   }
 }
+=======
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+

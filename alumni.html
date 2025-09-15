@@ -1,130 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alumni Success | Indiana University</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-  <style>
-    /* Reduced spacing */
-    .hero-section { height: 40vh; }
-    .hero-section h1 { font-size: 2.5rem; }
-    .hero-section p { font-size: 1rem; }
-    section.container, .bg-light { padding-top: 3rem; padding-bottom: 3rem; }
-    .card-body { padding: 1rem; }
-    .card-title { font-size: 1.25rem; margin-bottom: 0.5rem; }
-    .row.text-center > .col-md-4 { margin-bottom: 1.5rem; }
-    .overlay { background: rgba(0,0,0,0.4); }
-    .py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
-    .mb-5 { margin-bottom: 2rem !important; }
-    .btn-lg { padding: 0.5rem 1.5rem; font-size: 1rem; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alumni Success</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-crimson shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Indiana University</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
-          <li class="nav-item"><a class="nav-link" href="studentlife.html">Student Life</a></li>
-          <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item"><a class="nav-link active" href="alumni.html">Alumni</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero-section text-white text-center d-flex align-items-center justify-content-center" 
-           style="background: url('images/graduation.jpg') center/cover no-repeat; position: relative;">
-    <div class="overlay"></div>
-    <div class="container position-relative">
-      <h1 class="display-4 fw-bold">Alumni Success</h1>
-      <p class="lead">Celebrating the achievements of IU graduates across the globe</p>
-    </div>
-  </section>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #990000;">
+<div class="container">
+<a class="navbar-brand" href="index.html">IU Recruitment</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="studentlife.html">Student Life</a></li>
+        <li class="nav-item"><a class="nav-link" href="costs.html">Costs & Aid</a></li>
+        <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+</div>
+</div>
+</nav>
 
-  <!-- Notable Alumni -->
-  <section class="container">
-    <h2 class="text-center mb-4">Notable IU Alumni</h2>
-    <div class="row g-3">
-      <div class="col-md-4">
-        <div class="card h-100 shadow border-0">
-          <img src="mark cuban.jpg" class="card-img-top" alt="Mark Cuban">
-          <div class="card-body">
-            <h4 class="card-title">Mark Cuban</h4>
-            <p>Entrepreneur and owner of the Dallas Mavericks, IU Kelley School of Business graduate.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow border-0">
-          <img src="jane pauley.jpg" class="card-img-top" alt="Jane Pauley">
-          <div class="card-body">
-            <h4 class="card-title">Jane Pauley</h4>
-            <p>Emmy-winning journalist and host of CBS Sunday Morning, IU alumna in Political Science.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow border-0">
-          <img src="suzanne collins.jpg" class="card-img-top" alt="Suzanne Collins">
-          <div class="card-body">
-            <h4 class="card-title">Suzanne Collins</h4>
-            <p>Author of <em>The Hunger Games</em> trilogy, IU graduate in Drama and Telecommunications.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="container my-5">
+<h2 class="text-center" style="font-family: 'Merriweather', serif;">Notable Alumni</h2>
 
-  <!-- Career Outcomes -->
-  <section class="bg-light">
-    <div class="container">
-      <h2 class="text-center mb-3">Career Outcomes</h2>
-      <div class="row text-center">
-        <div class="col-md-4">
-          <h3 class="text-crimson fw-bold">94%</h3>
-          <p>of IU graduates find employment or continue education within 6 months</p>
-        </div>
-        <div class="col-md-4">
-          <h3 class="text-crimson fw-bold">200,000+</h3>
-          <p>IU alumni worldwide forming a global professional network</p>
-        </div>
-        <div class="col-md-4">
-          <h3 class="text-crimson fw-bold">Top 10</h3>
-          <p>for business, music, and public affairs programs nationally</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="row g-4 mt-4 text-center">
+<div class="col-md-3"><div class="card p-3">John Doe - CEO</div></div>
+<div class="col-md-3"><div class="card p-3">Jane Smith - Professor</div></div>
+<div class="col-md-3"><div class="card p-3">Alex Johnson - Artist</div></div>
+<div class="col-md-3"><div class="card p-3">Maria Lee - Scientist</div></div>
+</div>
 
-  <!-- Call to Action -->
-  <section class="py-4 text-center text-white" style="background: url('images/campus.jpg') center/cover no-repeat; position: relative;">
-    <div class="overlay"></div>
-    <div class="container position-relative">
-      <h2 class="fw-bold">Join the IU Alumni Network</h2>
-      <p class="mb-3">Stay connected with fellow Hoosiers, expand your career opportunities, and give back to the IU community.</p>
-      <a href="contact.html" class="btn btn-light btn-lg">Get Involved</a>
-    </div>
-  </section>
+<section class="mt-5">
+<h3>Career Placement & Internships</h3>
+<div class="row g-4 mt-3">
+<div class="col-md-6">
+<div class="card p-3">
+<p>Over 90% of graduates secure employment within 6 months.</p>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card p-3">
+<p>Strong partnerships with top industries and organizations.</p>
+</div>
+</div>
+</div>
+</section>
 
-  <!-- Footer -->
-  <footer class="footer py-2 text-center bg-crimson text-white">
-    <div class="container">
-      <p class="mb-0">&copy; 2025 Indiana University | Alumni</p>
-    </div>
-  </footer>
+</section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
