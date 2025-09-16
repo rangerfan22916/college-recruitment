@@ -1,95 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IU – Admissions & Cost</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IU – Cost & Financial Aid</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Additional tweaks */
+    .cost-table td, .cost-table th { padding: .75rem; }
+    .intro { margin-bottom: 2rem; }
+    .stat { font-size: 1.1rem; margin-top: 1rem; }
+    .cta-buttons .btn { margin: .5rem; }
+  </style>
 </head>
 <body>
-  <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-crimson shadow-sm sticky-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">Indiana University</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
-        <li class="nav-item"><a class="nav-link" href="studentlife.html">Student Life</a></li>
-        <li class="nav-item"><a class="nav-link active" href="admissions.html">Admissions</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-
-  <!-- Hero -->
-  <section class="hero d-flex align-items-center text-center text-white">
+  <!-- Navbar (same) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-crimson shadow-sm sticky-top">
     <div class="container">
-      <h1 class="display-4 fw-bold">Admissions & Financial Aid</h1>
-      <p class="lead">Apply, explore tuition, and discover financial aid opportunities at IU.</p>
+      <a class="navbar-brand fw-bold" href="index.html">Indiana University</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
+          <li class="nav-item"><a class="nav-link" href="studentlife.html">Student Life</a></li>
+          <li class="nav-item"><a class="nav-link active" href="admissions.html">Admissions</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="alumni.html">Alumni</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Intro -->
+  <section class="py-5 bg-light text-dark text-center">
+    <div class="container intro">
+      <h1 class="fw-bold">Cost & Financial Aid</h1>
+      <p>Cost is important — but the value of an IU education is shown in outcomes: high employment rates, debt management, and support throughout your journey.</p>
+      <p class="stat"><strong>More than 80%</strong> of students receive financial aid. <strong>50%</strong> graduate with little to no student debt.*</p>
     </div>
   </section>
 
-  <!-- Tuition & Fees -->
-  <section class="py-5">
+  <!-- Cost Table -->
+  <section class="py-4">
     <div class="container">
-      <h2 class="text-center mb-4">Tuition & Fees</h2>
-      <div class="row g-4 text-center">
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <div class="card-body">
-              <h5 class="card-title">Undergraduate Tuition</h5>
-              <p>$11,500 / semester (in-state)</p>
-            </div>
-          </div>
+      <h2 class="text-center mb-4">Estimated Cost of Attendance (Full-time Undergraduates, 2025-2026)</h2>
+      <div class="table-responsive">
+        <table class="table cost-table table-bordered">
+          <thead class="table-light">
+            <tr>
+              <th>Category</th>
+              <th>Indiana Residents</th>
+              <th>Non-Residents</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tuition & Mandatory Fees</td>
+              <td>$12,500</td>
+              <td>$42,300</td>
+            </tr>
+            <tr>
+              <td>Housing & Meals</td>
+              <td>$14,200</td>
+              <td>$14,200</td>
+            </tr>
+            <tr>
+              <td>Books & Supplies</td>
+              <td>$1,300</td>
+              <td>$1,300</td>
+            </tr>
+            <tr>
+              <td>Transportation</td>
+              <td>$1,000</td>
+              <td>$1,000</td>
+            </tr>
+            <tr>
+              <td>Personal Expenses</td>
+              <td>$2,400</td>
+              <td>$2,400</td>
+            </tr>
+            <tr class="table-secondary">
+              <td><strong>Total Estimated Cost of Attendance</strong></td>
+              <td><strong>$31,400</strong></td>
+              <td><strong>$61,200</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small fst-italic">*Estimated direct and indirect costs; final numbers may change for upcoming academic year.</p>
+    </div>
+  </section>
+
+  <!-- How Costs Work / Tuition Info -->
+  <section class="py-4 bg-light">
+    <div class="container">
+      <h3>How Tuition Works</h3>
+      <p>At IU, tuition is a flat rate. You pay the same tuition for up to a certain number of credit hours (for example, full semester load) regardless of extra upper-level / lower-level courses. Summer courses are billed separately.</p>
+
+      <h3>Additional Costs</h3>
+      <p>Housing plans, meal plans, books, travel & personal expenses vary depending on lifestyle, choice of residence hall, and meal plan. We provide many options so you can pick what works for you and your budget.</p>
+
+      <h3>For International Students</h3>
+      <p>International students generally have different fee structures and additional costs. Visit our <a href="https://admissions.indiana.edu/international-services/index.html" target="_blank">International Services</a> section for full details.</p>
+    </div>
+  </section>
+
+  <!-- Financial Aid / Aid Statistics -->
+  <section class="py-4">
+    <div class="container">
+      <h2 class="text-center mb-3">Financial Aid & Support</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <p>Nearly 85% of IU undergraduates receive some form of financial aid. We also offer merit and need-based scholarships, grants, work-study options, and flexible payment plans.</p>
         </div>
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <div class="card-body">
-              <h5 class="card-title">Graduate Tuition</h5>
-              <p>$12,500 / semester</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <div class="card-body">
-              <h5 class="card-title">Housing & Meals</h5>
-              <p>$5,500 / semester</p>
-            </div>
-          </div>
+        <div class="col-md-6">
+          <ul>
+            <li>Scholarships based on merit and financial need</li>
+            <li>Institutional grants</li>
+            <li>Federal aid (Pell, etc.)</li>
+            <li>Loan options and counseling</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Financial Aid -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-4">Financial Aid</h2>
-      <ul class="list-group list-group-flush text-center w-75 mx-auto">
-        <li class="list-group-item">Scholarships: Merit & Need-Based</li>
-        <li class="list-group-item">Grants & Federal Aid</li>
-        <li class="list-group-item">Student Loans & Payment Plans</li>
-      </ul>
+  <section class="py-4 text-center">
+    <div class="container cta-buttons">
+      <a href="https://admissions.indiana.edu/apply/index.html" target="_blank" class="btn btn-crimson btn-lg">Apply Now</a>
     </div>
   </section>
 
-  <footer class="footer bg-dark text-white text-center py-4">
-    <p class="mb-0">&copy; 2025 Indiana University | Bloomington, IN | <a href="contact.html" class="text-white">Contact Us</a></p>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Indiana University | Bloomington, IN | 
+        <a href="contact.html" class="text-white">Contact Us</a>
+      </p>
+    </div>
   </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

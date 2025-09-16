@@ -7,6 +7,19 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Tighter spacing tweaks */
+    header.academics-hero { padding: 40px 0; }
+    section { padding: 30px 0; }
+    h1, h2 { margin-bottom: 15px; }
+    p.lead { margin-bottom: 15px; }
+    .card-body { padding: 12px; }
+    .card-title { font-size: 1rem; margin-bottom: 8px; }
+    .card-text { font-size: 0.85rem; margin-bottom: 8px; }
+    .btn-sm { padding: 3px 8px; font-size: 0.8rem; }
+    .curriculum { margin-top: 6px; }
+    footer { padding: 10px 0; }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -39,19 +52,19 @@
   </header>
 
   <!-- Programs Section -->
-  <section class="py-4">
+  <section>
     <div class="container">
-      <h2 class="text-center mb-3">Academic Programs</h2>
-      <p class="text-center text-muted mb-4">Indiana University offers nationally ranked programs designed to prepare students for success in every field.</p>
-      <div class="row g-3">
+      <h2 class="text-center">Academic Programs</h2>
+      <p class="text-center text-muted">Indiana University offers nationally ranked programs designed to prepare students for success in every field.</p>
+      <div class="row g-2">
         <!-- Business -->
         <div class="col-md-3 col-sm-6">
-          <div class="card h-100 shadow-sm hover-card">
-            <div class="card-body p-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
               <h5 class="card-title">Business</h5>
-              <p class="card-text small">Accounting, Finance, Marketing, Entrepreneurship.</p>
+              <p class="card-text">Accounting, Finance, Marketing, Entrepreneurship.</p>
               <button class="btn btn-outline-crimson btn-sm" onclick="toggleCurriculum('business')">View Curriculum</button>
-              <ul class="curriculum mt-2 small" id="business" style="display:none;">
+              <ul class="curriculum small" id="business" style="display:none;">
                 <li>Intro to Business</li>
                 <li>Financial Accounting</li>
                 <li>Marketing Principles</li>
@@ -62,12 +75,12 @@
         </div>
         <!-- Engineering -->
         <div class="col-md-3 col-sm-6">
-          <div class="card h-100 shadow-sm hover-card">
-            <div class="card-body p-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
               <h5 class="card-title">Engineering</h5>
-              <p class="card-text small">Mechanical, Electrical, Civil, Computer Science.</p>
+              <p class="card-text">Mechanical, Electrical, Civil, Computer Science.</p>
               <button class="btn btn-outline-crimson btn-sm" onclick="toggleCurriculum('engineering')">View Curriculum</button>
-              <ul class="curriculum mt-2 small" id="engineering" style="display:none;">
+              <ul class="curriculum small" id="engineering" style="display:none;">
                 <li>Calculus I & II</li>
                 <li>Physics</li>
                 <li>Programming Basics</li>
@@ -78,12 +91,12 @@
         </div>
         <!-- Arts & Sciences -->
         <div class="col-md-3 col-sm-6">
-          <div class="card h-100 shadow-sm hover-card">
-            <div class="card-body p-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
               <h5 class="card-title">Arts & Sciences</h5>
-              <p class="card-text small">Biology, Chemistry, Psychology, Literature.</p>
+              <p class="card-text">Biology, Chemistry, Psychology, Literature.</p>
               <button class="btn btn-outline-crimson btn-sm" onclick="toggleCurriculum('arts')">View Curriculum</button>
-              <ul class="curriculum mt-2 small" id="arts" style="display:none;">
+              <ul class="curriculum small" id="arts" style="display:none;">
                 <li>Intro to Psychology</li>
                 <li>Organic Chemistry</li>
                 <li>World History</li>
@@ -94,12 +107,12 @@
         </div>
         <!-- Informatics -->
         <div class="col-md-3 col-sm-6">
-          <div class="card h-100 shadow-sm hover-card">
-            <div class="card-body p-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
               <h5 class="card-title">Informatics</h5>
-              <p class="card-text small">Data Science, AI, Cybersecurity, Software Dev.</p>
+              <p class="card-text">Data Science, AI, Cybersecurity, Software Dev.</p>
               <button class="btn btn-outline-crimson btn-sm" onclick="toggleCurriculum('informatics')">View Curriculum</button>
-              <ul class="curriculum mt-2 small" id="informatics" style="display:none;">
+              <ul class="curriculum small" id="informatics" style="display:none;">
                 <li>Data Structures</li>
                 <li>Database Systems</li>
                 <li>AI & Machine Learning</li>
@@ -111,15 +124,15 @@
       </div>
 
       <!-- More programs row -->
-      <div class="row g-3 mt-3">
+      <div class="row g-2 mt-2">
         <!-- Public Health -->
         <div class="col-md-3 col-sm-6">
-          <div class="card h-100 shadow-sm hover-card">
-            <div class="card-body p-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
               <h5 class="card-title">Public Health</h5>
-              <p class="card-text small">Global Health, Nutrition, Epidemiology.</p>
+              <p class="card-text">Global Health, Nutrition, Epidemiology.</p>
               <button class="btn btn-outline-crimson btn-sm" onclick="toggleCurriculum('health')">View Curriculum</button>
-              <ul class="curriculum mt-2 small" id="health" style="display:none;">
+              <ul class="curriculum small" id="health" style="display:none;">
                 <li>Intro to Public Health</li>
                 <li>Health Policy</li>
                 <li>Nutrition Science</li>
@@ -130,12 +143,12 @@
         </div>
         <!-- Law -->
         <div class="col-md-3 col-sm-6">
-          <div class="card h-100 shadow-sm hover-card">
-            <div class="card-body p-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
               <h5 class="card-title">Law</h5>
-              <p class="card-text small">Constitutional Law, International Law, Ethics.</p>
+              <p class="card-text">Constitutional Law, International Law, Ethics.</p>
               <button class="btn btn-outline-crimson btn-sm" onclick="toggleCurriculum('law')">View Curriculum</button>
-              <ul class="curriculum mt-2 small" id="law" style="display:none;">
+              <ul class="curriculum small" id="law" style="display:none;">
                 <li>Intro to Law</li>
                 <li>Constitutional Principles</li>
                 <li>Business Law</li>
@@ -146,12 +159,12 @@
         </div>
         <!-- Education -->
         <div class="col-md-3 col-sm-6">
-          <div class="card h-100 shadow-sm hover-card">
-            <div class="card-body p-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
               <h5 class="card-title">Education</h5>
-              <p class="card-text small">Elementary, Secondary, Special Education.</p>
+              <p class="card-text">Elementary, Secondary, Special Education.</p>
               <button class="btn btn-outline-crimson btn-sm" onclick="toggleCurriculum('education')">View Curriculum</button>
-              <ul class="curriculum mt-2 small" id="education" style="display:none;">
+              <ul class="curriculum small" id="education" style="display:none;">
                 <li>Child Development</li>
                 <li>Teaching Methods</li>
                 <li>Classroom Tech</li>
@@ -162,12 +175,12 @@
         </div>
         <!-- Music -->
         <div class="col-md-3 col-sm-6">
-          <div class="card h-100 shadow-sm hover-card">
-            <div class="card-body p-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
               <h5 class="card-title">Music</h5>
-              <p class="card-text small">Performance, Theory, Composition, Jazz Studies.</p>
+              <p class="card-text">Performance, Theory, Composition, Jazz Studies.</p>
               <button class="btn btn-outline-crimson btn-sm" onclick="toggleCurriculum('music')">View Curriculum</button>
-              <ul class="curriculum mt-2 small" id="music" style="display:none;">
+              <ul class="curriculum small" id="music" style="display:none;">
                 <li>Music Theory</li>
                 <li>History of Jazz</li>
                 <li>Performance Studies</li>
@@ -181,7 +194,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer bg-dark text-white text-center py-3 mt-3">
+  <footer class="footer bg-dark text-white text-center">
     <p class="mb-0">&copy; 2025 Indiana University | Bloomington, IN | <a href="contact.html" class="text-white">Contact Us</a></p>
   </footer>
 
