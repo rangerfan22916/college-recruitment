@@ -33,7 +33,6 @@ document.getElementById('contactForm')?.addEventListener('submit', function(e){
 // Fade-in on scroll for sections
 const faders = document.querySelectorAll('.fade-in');
 const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
-
 const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
   entries.forEach(entry => {
     if(!entry.isIntersecting) return;
@@ -42,20 +41,47 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
   });
 }, appearOptions);
 
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-  
-// script.js (included on all pages)
-window.addEventListener('scroll', function() {
-  const navbar = document.querySelector('.navbar');
-  if(window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
+faders.forEach(fader => appearOnScroll.observe(fader));
+
+
+// Scroll-triggered counter animation
+const counters = document.querySelectorAll('.counter');
+let counted = false;
+
+function runCounters() {
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    let current = 0;
+    const increment = Math.ceil(target / 200);
+
+    const updateCounter = () => {
+      current += increment;
+      if(current < target) {
+        counter.innerText = current.toLocaleString();
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.innerText = target.toLocaleString();
+      }
+    };
+
+    updateCounter();
+  });
+}
+
+function checkCounters() {
+  const statsSection = document.getElementById('stats');
+  if(!statsSection) return;
+  const sectionTop = statsSection.getBoundingClientRect().top;
+  const screenHeight = window.innerHeight;
+
+  if(sectionTop < screenHeight && !counted) {
+    runCounters();
+    counted = true;
   }
-});
+}
 
-});
+// Run once in case the section is already in view
+checkCounters();
 
-
-
+// Listen for scroll to trigger counters
+window.addEventListener('scroll', checkCounters);
