@@ -34,98 +34,83 @@ p, li, a, span, small {
 }
 
 /* ============================= */
-/* Navbar (Global for all pages) */
+/* Navbar Reset                  */
 /* ============================= */
 .navbar {
-  background-color: var(--crimson);
+  background-color: var(--crimson); /* solid IU crimson */
   padding: 0.5rem 1rem;
-  transition: all 0.3s ease;
 }
 
-.navbar.scrolled {
-  background-color: var(--dark-gray);
+.navbar-brand {
+  color: var(--white);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.navbar-brand:hover {
+  color: var(--white);
 }
 
 .nav-link {
   color: var(--white) !important;
-  transition: color 0.3s ease, transform 0.25s ease;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
   margin: 0 0.25rem;
+  letter-spacing: 0.5px;
 }
 
-.nav-link:hover {
-  color: var(--light-crimson) !important;
-  transform: scale(1.05);
-}
-
+.nav-link:hover, 
 .nav-link.active {
-  font-weight: 600;
-  border-bottom: 2px solid var(--white);
+  color: var(--white) !important;
+  border-bottom: none;
 }
 
-.navbar-brand {
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  color: var(--white);
-}
-
-.navbar-brand:hover {
-  color: var(--light-crimson);
+.navbar-toggler {
+  border: none;
 }
 
 /* ============================= */
 /* Hero / Header Sections        */
 /* ============================= */
-/* Make sure hero is positioned so overlay and text stacking work */
 .hero, .academics-hero {
-  position: relative; /* required so ::before/::after stack correctly */
+  position: relative;
   min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 2rem 1rem;
-  color: #fff; /* keep text white */
+  color: #fff;
+  background: url('images/studentlife.jpg') center/cover no-repeat;
 }
 
-/* Optional dark overlay to improve contrast (keeps background-image visible) */
 .hero::before,
 .academics-hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35); /* increase opacity if glow still faint */
+  background: rgba(0,0,0,0.35);
   z-index: 0;
   pointer-events: none;
 }
 
-/* Ensure the actual text sits above the overlay */
 .hero h1, .hero h2, .hero p,
 .academics-hero h1, .academics-hero h2, .academics-hero p {
   position: relative;
   z-index: 1;
-  /* stacked shadows: white glow (outer), then black depth */
-  text-shadow:
-    0 0 12px rgba(255,255,255,0.95),   /* white glow */
-    0 4px 14px rgba(0,0,0,0.55);       /* darker drop shadow for depth */
 }
-
-/* If some other rule keeps overriding text-shadow, try this (last resort): */
-.hero h1.strong-glow,
-.academics-hero h1.strong-glow {
-  text-shadow:
-    0 0 14px rgba(255,255,255,0.98),
-    0 5px 16px rgba(0,0,0,0.6) !important;
-}
-
-
-
 
 .hero h1, .academics-hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: var(--crimson);
+  text-shadow:
+    -2px -2px 0 var(--white),
+     2px -2px 0 var(--white),
+    -2px  2px 0 var(--white),
+     2px  2px 0 var(--white),
+     0    0   12px rgba(0,0,0,0.45);
 }
 
 .hero p, .academics-hero p {
@@ -179,145 +164,51 @@ p, li, a, span, small {
   margin-bottom: 0.75rem;
 }
 
-/* View Curriculum Button */
-.btn-outline-crimson {
-  border: 2px solid var(--crimson);
-  color: var(--crimson);
-  font-weight: 600;
-  border-radius: 30px;
-  padding: 6px 18px;
-  font-size: 0.9rem;
-  transition: all 0.25s ease;
-}
-
-.btn-outline-crimson:hover {
-  background: var(--crimson);
-  color: var(--white);
-  transform: scale(1.05);
-}
-
-/* Curriculum Lists */
-ul.curriculum {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0.5rem;
-}
-
-ul.curriculum li {
-  background: var(--light-gray);
-  margin-bottom: 0.35rem;
-  padding: 0.35rem 0.7rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  color: var(--dark-gray);
-  transition: background 0.3s ease;
-}
-
-ul.curriculum li:hover {
-  background: #ebebeb;
-}
-
 /* ============================= */
-/* Stats Section Styling          */
-/* ============================= */
-.stats-section {
-  background: linear-gradient(135deg, #ffffff, #f8f8f8);
-  padding: 60px 0;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px var(--shadow-color);
-  transition: all 0.3s ease;
-}
-
-.stats-section .col-md-3, 
-.stats-section .col-md-12 {
-  padding: 20px;
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: #ffffff;
-}
-
-.stats-section .col-md-3:hover,
-.stats-section .col-md-12:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px var(--shadow-color);
-}
-
-.stats-section h2 {
-  font-family: 'Inter', sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--crimson);
-  margin-bottom: 0.3rem;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.stats-section p {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--dark-gray);
-  margin-bottom: 0;
-}
-
-.stats-section .col-md-3:hover h2,
-.stats-section .col-md-12:hover h2 {
-  color: var(--light-crimson);
-  transform: scale(1.1);
-}
-
-/* Optional: gradient text for the counters */
-.counter-gradient {
-  background: linear-gradient(90deg, #990000, #cc0000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* ============================= */
-/* Location Section / Map Styling */
-/* ============================= */
-iframe {
-  width: 100%;
-  max-width: 800px;
-  height: 450px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px var(--shadow-color);
-  border: none;
-  margin-top: 20px;
-}
-
-/* ============================= */
-/* Footer Styling                 */
+/* Footer Styling – Small & Pop   */
 /* ============================= */
 .footer {
-  background-color: var(--dark-gray);
+  width: 100%;
+  background: linear-gradient(135deg, #990000, #cc0000);
   color: var(--white);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: 0.5px;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
 }
 
 .footer a {
   color: var(--white);
-  text-decoration: underline;
-  transition: color 0.3s ease;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
 }
 
 .footer a:hover {
   color: var(--light-crimson);
+  text-shadow: 0 0 6px var(--white);
 }
 
-/* ============================= */
-/* Animations                     */
-/* ============================= */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 1s ease-out;
+.footer .footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.fade-in.appear {
-  opacity: 1;
-  transform: translateY(0);
+.footer p {
+  margin: 0;
+  font-weight: 500;
+  text-align: center;
 }
+
 
 /* ============================= */
 /* Responsive Adjustments         */
@@ -328,12 +219,6 @@ iframe {
   }
   .hero p, .academics-hero p {
     font-size: 1.2rem;
-  }
-  .stats-section h2 {
-    font-size: 2.5rem;
-  }
-  .stats-section p {
-    font-size: 1.1rem;
   }
 }
 
@@ -347,9 +232,6 @@ iframe {
   .card-text {
     font-size: 0.9rem;
   }
-  .stats-section .col-md-3, .stats-section .col-md-12 {
-    margin-bottom: 20px;
-  }
 }
 
 @media (max-width: 576px) {
@@ -359,38 +241,8 @@ iframe {
   .hero p, .academics-hero p {
     font-size: 1rem;
   }
-  .btn-crimson, .btn-outline-crimson {
+  .btn-crimson {
     padding: 6px 16px;
     font-size: 0.85rem;
   }
-  .stats-section h2 {
-    font-size: 2rem;
-  }
-  .stats-section p {
-    font-size: 1rem;
-  }
-  /* Indiana University crimson */
-.bg-crimson {
-  background-color: #990000;
-}
-
-/* Headings */
-h1, h4 {
-  font-family: "Georgia", serif;
-  font-weight: 600;
-}
-
-/* Card styling */
-.card {
-  transition: transform 0.2s ease-in-out;
-}
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* Footer */
-footer {
-  font-size: 0.9rem;
-}
-
 }

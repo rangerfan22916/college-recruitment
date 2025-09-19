@@ -44,13 +44,32 @@
     </div>
   </nav>
 
-  <!-- Academics Hero -->
-  <header class="academics-hero d-flex align-items-center text-center text-white">
-    <div class="container">
-      <h1 class="fw-bold">Explore Academics at IU</h1>
-      <p class="lead">Excellence across business, sciences, arts, engineering, and beyond.</p>
-    </div>
-  </header>
+ <!-- Hero Section -->
+<header 
+  style="background: url('academics.jpg') center center/cover no-repeat; min-height: 60vh; position: relative;" 
+  class="d-flex align-items-center text-center academics-hero">
+
+  <!-- Light overlay for contrast -->
+  <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(255,255,255,0.3);"></div>
+
+  <!-- Content -->
+  <div class="container" style="position: relative; z-index: 2;">
+    <h1 style="
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 3.5rem;
+      line-height: 1.2;
+      color: var(--crimson);
+      text-shadow: 
+        -2px -2px 0 #fff,  
+         2px -2px 0 #fff,  
+        -2px  2px 0 #fff,  
+         2px  2px 0 #fff;
+    ">
+      Academics at Indiana University
+    </h1>
+  </div>
+</header>
 
   <!-- Programs Section -->
   <section>
@@ -58,6 +77,7 @@
       <h2 class="text-center">Academic Programs</h2>
       <p class="text-center text-muted">Indiana University offers nationally ranked programs designed to prepare students for success in every field.</p>
       
+      <!-- Programs Grid -->
       <div class="row g-2">
         <!-- Business -->
         <div class="col-md-3 col-sm-6">
@@ -201,10 +221,11 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer bg-dark text-white text-center">
-    <p class="mb-0">&copy; 2025 Indiana University | Bloomington, IN | <a href="contact.html" class="text-white">Contact Us</a></p>
-  </footer>
+ <!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2025 Indiana University | Home</p>
+</footer>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
