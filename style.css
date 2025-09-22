@@ -37,7 +37,7 @@ p, li, a, span, small {
 /* Navbar Reset                  */
 /* ============================= */
 .navbar {
-  background-color: var(--crimson); /* solid IU crimson */
+  background-color: var(--crimson);
   padding: 0.5rem 1rem;
 }
 
@@ -137,13 +137,39 @@ p, li, a, span, small {
   transform: scale(1.05);
 }
 
-/* Cards */
+/* Arrow effect for buttons */
+.arrow-btn {
+  position: relative;
+  padding-right: 2rem;
+  transition: all 0.3s ease;
+}
+
+.arrow-btn::after {
+  content: '→';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+  font-weight: bold;
+}
+
+.arrow-btn:hover::after {
+  transform: translateY(-50%) translateX(5px);
+}
+
+/* ============================= */
+/* Cards                          */
+/* ============================= */
 .card, .hover-card {
   border-radius: 12px;
   border: 1px solid #e5e5e5;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 1rem;
+  padding: 0;
   background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card:hover, .hover-card:hover {
@@ -162,6 +188,22 @@ p, li, a, span, small {
   font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 0.75rem;
+}
+
+.card-img-top {
+  height: 280px;       /* uniform image height */
+  width: 100%;
+  object-fit: cover;   /* crop/scale to fill */
+  display: block;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 /* ============================= */
@@ -208,7 +250,6 @@ p, li, a, span, small {
   font-weight: 500;
   text-align: center;
 }
-
 
 /* ============================= */
 /* Responsive Adjustments         */
